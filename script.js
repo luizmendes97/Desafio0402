@@ -1,34 +1,37 @@
 const students = [
   {
-    name: Miguel,
-    Prova1: 8,
-    Prova2: 5,
+    name: "Miguel",
+    prova1: 8,
+    prova2: 5,
   },
 
   {
-    name: Elza,
-    Prova1: 10,
-    Prova2: 5,
+    name: "Elza",
+    prova1: 10,
+    prova2: 8,
   },
   {
-    name: Felipe,
-    Prova1: 7,
-    Prova2: 3,
+    name: "Felipe",
+    prova1: 8,
+    prova2: 8,
   },
   {
-    name: Alice,
-    Prova1: 8,
-    Prova2: 8,
+    name: "Alice",
+    prova1: 7,
+    prova2: 3,
   },
 ]
 
-let average = (Number(Prova1) + Number(Prova2)) / 2
-
-let result = average > 7
-
-if (result) {
-  alert("A media do(a) aluno(a) + students + average"
-   + "Parabéns " + students + "!Você foi aprovado(a) no concurso")
-} else {
-  alert("Não foi dessa vez " + students + "Tente novamente!")
+for (let student of students) {
+  let average = (student.prova1 + student.prova2) / 2
+  let result = average > 7
+  if (result) {
+    alert(
+      `A média do(a) aluno(a) ${student.name} é: ${average}\n Parabéns, ${student.name}! Você foi aprovado(a) no concurso!`
+    )
+  } else {
+    alert(
+      `A média do(a) aluno(a) ${student.name} é: ${average}\nNão foi dessa vez, ${student.name}! Tente Novamente!`
+    )
+  }
 }
